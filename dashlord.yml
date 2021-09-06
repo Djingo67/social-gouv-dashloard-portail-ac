@@ -17,6 +17,6 @@ tools:
   codescan: true
   stats: true
 urls:
-  - url: https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/
+  - url: https://www2.assainissement.developpement-durable.gouv.fr/PortailAC
     repositories:
       - Djingo67/PortailAC
