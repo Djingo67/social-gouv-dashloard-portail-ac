@@ -1,7 +1,7 @@
 [
   {
     "404": null,
-    "url": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC",
+    "url": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
     "repositories": [
       "Djingo67/PortailAC"
     ],
@@ -33,7 +33,7 @@
     },
     "wappalyzer": {
       "urls": {
-        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC": {
+        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/": {
           "status": 0
         }
       },
