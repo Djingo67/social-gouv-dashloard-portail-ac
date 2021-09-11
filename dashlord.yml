@@ -3,7 +3,7 @@ description: Bonnes pratiques techniques
 entity: Ministères sociaux
 footer: Powered by SocialGouv
 tools:
-  screenshot: true
+  screenshot: false
   nmap: true
   zap: true
   wappalyzer: true
