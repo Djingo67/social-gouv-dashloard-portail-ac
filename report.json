@@ -12,43 +12,2312 @@
     "codescan": null,
     "testssl": [
       {
-        "id": "scanProblem",
+        "id": "service",
         "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
         "port": "443",
-        "severity": "FATAL",
-        "finding": "Can't connect to '37.235.89.249:443'\nMake sure a firewall is not between you and your scanning target!"
+        "severity": "INFO",
+        "finding": "HTTP"
+      },
+      {
+        "id": "pre_128cipher",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No 128 cipher limit bug"
+      },
+      {
+        "id": "SSLv2",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "not offered"
+      },
+      {
+        "id": "SSLv3",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "not offered"
+      },
+      {
+        "id": "TLS1",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not offered"
+      },
+      {
+        "id": "TLS1_1",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not offered"
+      },
+      {
+        "id": "TLS1_2",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "TLS1_3",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not offered + downgraded to weaker protocol"
+      },
+      {
+        "id": "ALPN",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_NULL",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_aNULL",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_EXPORT",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_LOW",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_3DES_IDEA",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "cwe": "CWE-310",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_AVERAGE",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "LOW",
+        "cwe": "CWE-310",
+        "finding": "offered"
+      },
+      {
+        "id": "cipherlist_GOOD",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "cipherlist_STRONG",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "cipher_order",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "server"
+      },
+      {
+        "id": "protocol_negotiated",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "Default protocol TLS1.2"
+      },
+      {
+        "id": "cipher_negotiated",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "ECDHE-RSA-AES256-GCM-SHA384, 256 bit ECDH (P-256)"
+      },
+      {
+        "id": "cipherorder_TLSv1_2",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "FS",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "FS_ciphers",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+      },
+      {
+        "id": "FS_ECDHE_curves",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "prime256v1"
+      },
+      {
+        "id": "TLS_extensions",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'status request/#5' 'heartbeat/#15' 'next protocol/#13172'"
+      },
+      {
+        "id": "TLS_session_ticket",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "no -- no lifetime advertised"
+      },
+      {
+        "id": "SSL_sessionID_support",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "yes"
+      },
+      {
+        "id": "sessionresumption_ticket",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not supported"
+      },
+      {
+        "id": "sessionresumption_ID",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "supported"
+      },
+      {
+        "id": "TLS_timestamp",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "random"
+      },
+      {
+        "id": "cert_compression",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "N/A"
+      },
+      {
+        "id": "clientAuth",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "none"
+      },
+      {
+        "id": "cert_numbers",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "1"
+      },
+      {
+        "id": "cert_signatureAlgorithm",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "SHA256 with RSA"
+      },
+      {
+        "id": "cert_keySize",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "RSA 2048 bits (exponent is 65537)"
+      },
+      {
+        "id": "cert_keyUsage",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Digital Signature, Key Encipherment"
+      },
+      {
+        "id": "cert_extKeyUsage",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLS Web Server Authentication"
+      },
+      {
+        "id": "cert_serialNumber",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "CD407C6185EC5AACFEEAB4F21D1A5157"
+      },
+      {
+        "id": "cert_fingerprintSHA1",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "13DDF31F44621D591D4C4B3FFC6B8F4FD6582DE1"
+      },
+      {
+        "id": "cert_fingerprintSHA256",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "C5081D37F8B7DCC78F4FA8552E65586656C7D05C72523E1D62720171B49EA8C1"
+      },
+      {
+        "id": "cert",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "-----BEGIN CERTIFICATE----- MIIJBTCCBu2gAwIBAgIRAM1AfGGF7Fqs/uq08h0aUVcwDQYJKoZIhvcNAQELBQAw fTELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURISU1ZT1RJUzEcMBoGA1UECwwTMDAw MiA0ODE0NjMwODEwMDAzNjEdMBsGA1UEYQwUTlRSRlItNDgxNDYzMDgxMDAwMzYx HTAbBgNVBAMMFENlcnRpZ25hIFNlcnZpY2VzIENBMB4XDTIxMDgzMDIyMDAwMFoX DTIyMDgzMDIxNTk1OVowgbQxCzAJBgNVBAYTAkZSMRkwFwYDVQQHDBBQQVJJUyBM QSBERUZFTlNFMSAwHgYDVQQKDBdTRyBNSU4gVFJBTlMgRUNPTCBTT0xJRDEcMBoG A1UECwwTMDAwMiAxMzAwMTk1NDAwMDAyNTE1MDMGA1UEAwwsYXNzYWluaXNzZW1l bnQuZGV2ZWxvcHBlbWVudC1kdXJhYmxlLmdvdXYuZnIxEzARBgNVBAUTClMyMTA2 OTA4NDUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDM2lq7eQoV9vvR EtbAuFeFe7ZpYkWCZ2HnYtB2fh9dJjHCsroH8TeBxMCLwhebtXFIo6fZH6lXU3/c dasCaUz3mtha/asntuJ55sje01FpFTpfcf7d7kQM7bPm/1RbHoKHCnPH4Yqu3QaC zM/eZBuNoWu1kgb5xRD6ADXWFyKZ1iBKDizCB7dtiljPede4B7Zham/ICccd1FIn m++B97SWTJyLje+AfjasO15PydSMVvVy7pY7qJDGgTQGqF78Dhp15a2QKDKI4vVa MJLXA+W69M5h9YrRNMvHaqWHYDXc9MF6B5hCWfUMcOPzf5Mt2l/c7Iy6eBdSxgAN VXoWP2K1AgMBAAGjggRGMIIEQjCB5AYIKwYBBQUHAQEEgdcwgdQwOAYIKwYBBQUH MAKGLGh0dHA6Ly9hdXRvcml0ZS5kaGlteW90aXMuY29tL3NlcnZpY2VzY2EuZGVy MDYGCCsGAQUFBzAChipodHRwOi8vYXV0b3JpdGUuY2VydGlnbmEuZnIvc2Vydmlj ZXNjYS5kZXIwMAYIKwYBBQUHMAGGJGh0dHA6Ly9zZXJ2aWNlc2NhLm9jc3AuZGhp bXlvdGlzLmNvbTAuBggrBgEFBQcwAYYiaHR0cDovL3NlcnZpY2VzY2Eub2NzcC5j ZXJ0aWduYS5mcjAfBgNVHSMEGDAWgBSs7IaPSzccuH8XGxnQruhO4zRcEjAJBgNV HRMEAjAAMGEGA1UdIARaMFgwCAYGZ4EMAQICMEwGCyqBegGBMQIFAQEBMD0wOwYI KwYBBQUHAgEWL2h0dHBzOi8vd3d3LmNlcnRpZ25hLmNvbS9hdXRvcml0ZS1jZXJ0 aWZpY2F0aW9uMGUGA1UdHwReMFwwK6ApoCeGJWh0dHA6Ly9jcmwuY2VydGlnbmEu ZnIvc2VydmljZXNjYS5jcmwwLaAroCmGJ2h0dHA6Ly9jcmwuZGhpbXlvdGlzLmNv bS9zZXJ2aWNlc2NhLmNybDATBgNVHSUEDDAKBggrBgEFBQcDATAOBgNVHQ8BAf8E BAMCBaAwgZ4GA1UdEQSBljCBk4Iwd3d3LmFzc2Fpbmlzc2VtZW50LmRldmVsb3Bw ZW1lbnQtZHVyYWJsZS5nb3V2LmZygixhc3NhaW5pc3NlbWVudC5kZXZlbG9wcGVt ZW50LWR1cmFibGUuZ291di5mcoIxd3d3Mi5hc3NhaW5pc3NlbWVudC5kZXZlbG9w cGVtZW50LWR1cmFibGUuZ291di5mcjAdBgNVHQ4EFgQUtzmywkO69l0fClbAt8Gf Wm7hXxIwggF8BgorBgEEAdZ5AgQCBIIBbASCAWgBZgB1AEalVet1+pEgMLWiiWn0 830RLEF0vv1JuIWr8vxw/m1HAAABe5tr4B4AAAQDAEYwRAIgb+Xmv0xCzhS+pL1T Pn3SpRQXxeHVHw1gciujewo+A4ACIBGOmbE9IArgdRQUwBJjs1eW2ot3tiPV/4py 97XNMjZmAHYAQcjKsd8iRkoQxqE6CUKHXk4xixsD6+tLx2jwkGKWBvYAAAF7m2vg 6QAABAMARzBFAiEAsnU0Kg6bdbW6dvz2jSU8cr1PAEiK6vwPzqN7E2X5d4MCIDGk pyjEy66zHp0Jyb3f6vkB9u2HSf/75PSoghxVn+5FAHUAb1N2rDHwMRnYmQCkURX/ dxUcEdkCwQApBo2yCJo32RMAAAF7m2vkHQAABAMARjBEAiB+67RyrmJEFZz6f321 MLeBEsjNcabIxo/jJBEnXqlj9AIgRzvdpxwzllwfNZnHGBt2W35N1wawzpaB5QaW exV18/IwDQYJKoZIhvcNAQELBQADggIBABQXsq4b7wvCE8E/CB4mrgKIh8Fmcc3g MvNEpJhALFlfsh3YvTburR9Z8C3CORk1rMAvOs/VfudoJU3qIfWehBkejC9VG5QQ QrBh4LqXy74gQ3Fx12AdVH4IHr4AwXyjTyFfknPDYg+f39gltwuyr1vFL+mTrHNg 1+UUOIWwbEjfetmZzevydq99QbbprxEkNdVLw4NJRZg9gzJ+xM9XwKpEDu5FdqQ3 f1vFE0G46DzNpybFhJ6WVU8flkqZGZJYK+6YOWXjMragS3vC3XQtO/x779vVZWff RgmmUkCanBItTX3HmHsfwI4WvwLvpjLCjkQUzmvVuP5o9aw4NEaS5BqE1WKzdtwQ dMh+7BLhmKV3/BypvYtkZUQVvlJKqXlUmc4gQhboULcsQhRcqkRQZp+J7d42n0A9 xrKP01myZPMDI6FocbJOWFxVKvLOClEiwrcbZkdxXyl49byT+/Nz/KZmBKaB4I7F +XjHBfatmqDoWEshUr+uFq9+ewZTONMZsNpHSOEyJuYwB4sciItmtXe3OcUOGsZc 75AMczykWXVMJqQWWTlq1tKgdTzqem4YRV3IRKKfKWkZ05UNQNK8pKg/PaYaoAJR Fp0Uvm25geg0qOJWesFWV0v/4dJ0sRSaHCFoNWJE+SMiMorsfg/B7NI3Q+KzYOoi 9sknTzOFwSmY -----END CERTIFICATE-----"
+      },
+      {
+        "id": "cert_commonName",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "assainissement.developpement-durable.gouv.fr"
+      },
+      {
+        "id": "cert_commonName_wo_SNI",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "www.1000paysages.gouv.fr"
+      },
+      {
+        "id": "cert_subjectAltName",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "www.assainissement.developpement-durable.gouv.fr assainissement.developpement-durable.gouv.fr www2.assainissement.developpement-durable.gouv.fr"
+      },
+      {
+        "id": "cert_trust",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "Ok via SAN (SNI mandatory)"
+      },
+      {
+        "id": "cert_chain_of_trust",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "CRITICAL",
+        "finding": "Some certificate trust checks failed -> Java (chain incomplete)  , OK -> Mozilla Microsoft Linux Apple"
+      },
+      {
+        "id": "cert_certificatePolicies_EV",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "no"
+      },
+      {
+        "id": "cert_expirationStatus",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "343 >= 60 days"
+      },
+      {
+        "id": "cert_notBefore",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "2021-08-30 22:00"
+      },
+      {
+        "id": "cert_notAfter",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "2022-08-30 21:59"
+      },
+      {
+        "id": "cert_extlifeSpan",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "certificate has no extended life time according to browser forum"
+      },
+      {
+        "id": "cert_eTLS",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not present"
+      },
+      {
+        "id": "cert_crlDistributionPoints",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
+      },
+      {
+        "id": "cert_ocspURL",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
+      },
+      {
+        "id": "OCSP_stapling",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "cert_ocspRevoked",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "not revoked"
+      },
+      {
+        "id": "cert_mustStapleExtension",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "--"
+      },
+      {
+        "id": "DNS_CAArecord",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "issue=certigna.fr, issuewild=;"
+      },
+      {
+        "id": "certificate_transparency",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "yes (certificate extension)"
+      },
+      {
+        "id": "certs_countServer",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "2"
+      },
+      {
+        "id": "certs_list_ordering_problem",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "no"
+      },
+      {
+        "id": "cert_caIssuers",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Certigna Services CA (DHIMYOTIS from FR)"
+      },
+      {
+        "id": "intermediate_cert <#1>",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "-----BEGIN CERTIFICATE----- MIIGFjCCBP6gAwIBAgIQb4L6KKzW94S7WxILqHNnrTANBgkqhkiG9w0BAQsFADA0 MQswCQYDVQQGEwJGUjESMBAGA1UECgwJRGhpbXlvdGlzMREwDwYDVQQDDAhDZXJ0 aWduYTAeFw0xNTExMjUxMTMzNTJaFw0yNTExMjIxMTMzNTJaMH0xCzAJBgNVBAYT AkZSMRIwEAYDVQQKDAlESElNWU9USVMxHDAaBgNVBAsMEzAwMDIgNDgxNDYzMDgx MDAwMzYxHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MR0wGwYDVQQDDBRD ZXJ0aWduYSBTZXJ2aWNlcyBDQTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoC ggIBALPM+7LpWBz9wFcPaTc3xnB+5g0XrnptB0EPPfrR04vO52Ykm4ky1d4ZLd10 tbM1fa1RqNSOVWWg93O4pL7zCFKlz6JV74ZZVhHpEAwzBwv2oPnxvVbxtSN67xsS Y66ahUYxjzs8+3FhmsiRxqwnTYvK2u70uglUvRisOKyTL/M6JnrC4y8tlmoz7OSa 5BmBMVplJFQtvmON6N9aHLvYMz+EyJPCbXL6pELxeHjFT5QmIaRamsr2DOTaCjtB ZKI1Wnh3X7lnbjM8MESJiV2t7E9tIQNG0Z/HI3tO4aaUMum3KysY5sC8v3vi7rry GidgzHQhrtP0ZXWW5UH/k7umLS/P/XXWnCFpc2Lxa1uDGfc2im7xibRoPP+JNZsz N76euFlls6jyEXAiwnVr14tVVTewLK0OWs5SJHpEKp8PGMZRDj59EmMvokWwzL6Q zNZ6vVAp00oOm05sbspNY9+MFqGKKUsKvhFGEa4XmRNxDe6KswLcjPZB+NKHZ0QW Fd4ip5C5XmEK/8qIPjwVr9dah9+oiHGGO8Wx7gJAMF5DTmkvW7GhqCKj1LmHnabj zc8av6kxWVQZi/C7HCm9i/W4wio+JA2EAFLqNL3GPNbK9kau4yPhQt/c7zxzo0OH nlsV4THCG7oOCd3cfCiyfQcb3FBt6OSpaKRZxjCLBwP00r0fAgMBAAGjggHZMIIB 1TASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQU rOyGj0s3HLh/FxsZ0K7oTuM0XBIwZAYDVR0jBF0wW4AUGu3+QTmQtCRZvgHyUtVF 9lo53BGhOKQ2MDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAP BgNVBAMMCENlcnRpZ25hggkA/tzjAQ/JSP8wSQYDVR0gBEIwQDA+BgoqgXoBgTEB AAECMDAwLgYIKwYBBQUHAgEWImh0dHBzOi8vd3d3LmNlcnRpZ25hLmZyL2F1dG9y aXRlcy8wfAYIKwYBBQUHAQEEcDBuMDQGCCsGAQUFBzAChihodHRwOi8vYXV0b3Jp dGUuY2VydGlnbmEuZnIvY2VydGlnbmEuZGVyMDYGCCsGAQUFBzAChipodHRwOi8v YXV0b3JpdGUuZGhpbXlvdGlzLmNvbS9jZXJ0aWduYS5kZXIwYQYDVR0fBFowWDAp oCegJYYjaHR0cDovL2NybC5jZXJ0aWduYS5mci9jZXJ0aWduYS5jcmwwK6ApoCeG JWh0dHA6Ly9jcmwuZGhpbXlvdGlzLmNvbS9jZXJ0aWduYS5jcmwwDQYJKoZIhvcN AQELBQADggEBAGLft7gIuGPZVfg0cTM+HT2xAZFPDb/2+siH06x+dH044zMKbBIN bRzhKipwB1A3MW8FQjveE9tyrfyuqZE/X+o2SlGcdNV44ybYkxo4f6kcLEavV/IW +oFEnojZlhpksYcxrvQoEyqkAwshe8IS2KtZHKVACrt+XSs0lwvy7ALGmHaF7A4b y6cZWItA7Lhj8XWp+8tBJDj7HocRbWtxzEODdBuyMgJzFrNjc+97J0vH/K0+3yjm kczpKshMA0tM+MF9XDMN/MuwrPmUWGO/fHiqHgUp8yqeWtl1n44ZxkkK1t9GRwhn DWLv73/xhTmdhWYQ/reo0GbgBoLiltKmIJQ= -----END CERTIFICATE-----"
+      },
+      {
+        "id": "intermediate_cert_fingerprintSHA256 <#1>",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+      },
+      {
+        "id": "intermediate_cert_notBefore <#1>",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "2015-11-25 11:33"
+      },
+      {
+        "id": "intermediate_cert_notAfter <#1>",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "2025-11-22 11:33"
+      },
+      {
+        "id": "intermediate_cert_expiration <#1>",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "ok > 40 days"
+      },
+      {
+        "id": "intermediate_cert_chain <#1>",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Certigna Services CA <-- Certigna"
+      },
+      {
+        "id": "intermediate_cert_badOCSP",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "intermediate certificate(s) is/are ok"
+      },
+      {
+        "id": "HTTP_status_code",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "302 Found ('/')"
+      },
+      {
+        "id": "HTTP_clock_skew",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "0 seconds from localtime"
+      },
+      {
+        "id": "HSTS",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "LOW",
+        "finding": "not offered"
+      },
+      {
+        "id": "HPKP",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No support for HTTP Public Key Pinning"
+      },
+      {
+        "id": "banner_server",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "nginx"
+      },
+      {
+        "id": "banner_application",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No application banner found"
+      },
+      {
+        "id": "cookie_count",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "0 at '/' (30x detected, better try target URL of 30x)"
+      },
+      {
+        "id": "security_headers",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "MEDIUM",
+        "finding": "--"
+      },
+      {
+        "id": "banner_reverseproxy",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "cwe": "CWE-200",
+        "finding": "X-CacheTTL: no: TTL problem"
+      },
+      {
+        "id": "heartbleed",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-0160",
+        "cwe": "CWE-119",
+        "finding": "not vulnerable , timed out"
+      },
+      {
+        "id": "CCS",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-0224",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "ticketbleed",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2016-9244",
+        "cwe": "CWE-200",
+        "finding": "no session ticket extension"
+      },
+      {
+        "id": "ROBOT",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+        "cwe": "CWE-203",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "secure_renego",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-310",
+        "finding": "supported"
+      },
+      {
+        "id": "secure_client_renego",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2011-1473",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "CRIME_TLS",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2012-4929",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "BREACH",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2013-3587",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+      },
+      {
+        "id": "POODLE_SSL",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-3566",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable, no SSLv3"
+      },
+      {
+        "id": "fallback_SCSV",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "no protocol below TLS 1.2 offered"
+      },
+      {
+        "id": "SWEET32",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2016-2183 CVE-2016-6329",
+        "cwe": "CWE-327",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "FREAK",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-0204",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "DROWN",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2016-0800 CVE-2016-0703",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable on this host and port"
+      },
+      {
+        "id": "DROWN_hint",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "cve": "CVE-2016-0800 CVE-2016-0703",
+        "cwe": "CWE-310",
+        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://censys.io/ipv4?q=C5081D37F8B7DCC78F4FA8552E65586656C7D05C72523E1D62720171B49EA8C1"
+      },
+      {
+        "id": "LOGJAM",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-4000",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable, no DH EXPORT ciphers,"
+      },
+      {
+        "id": "LOGJAM-common_primes",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-4000",
+        "cwe": "CWE-310",
+        "finding": "no DH key with <= TLS 1.2"
+      },
+      {
+        "id": "BEAST",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2011-3389",
+        "cwe": "CWE-20",
+        "finding": "not vulnerable, no SSL3 or TLS1"
+      },
+      {
+        "id": "LUCKY13",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "LOW",
+        "cve": "CVE-2013-0169",
+        "cwe": "CWE-310",
+        "finding": "potentially vulnerable, uses TLS CBC ciphers"
+      },
+      {
+        "id": "winshock",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-6321",
+        "cwe": "CWE-94",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "RC4",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2013-2566 CVE-2015-2808",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "clientsimulation-android_442",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-android_500",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-SHA"
+      },
+      {
+        "id": "clientsimulation-android_60",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-SHA"
+      },
+      {
+        "id": "clientsimulation-android_70",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-android_81",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-android_90",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-android_X",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-chrome_74_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-chrome_79_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-firefox_66_win81",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-firefox_71_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-ie_6_xp",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-ie_8_win7",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-ie_8_xp",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-ie_11_win7",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+      },
+      {
+        "id": "clientsimulation-ie_11_win81",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+      },
+      {
+        "id": "clientsimulation-ie_11_winphone81",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-SHA"
+      },
+      {
+        "id": "clientsimulation-ie_11_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-edge_15_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-edge_17_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-opera_66_win10",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-safari_9_ios9",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-safari_9_osx1011",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-safari_10_osx1012",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-safari_121_ios_122",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-safari_130_osx_10146",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-apple_ats_9_ios9",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-java_6u45",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-java_7u25",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-java_8u161",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-java1102",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-java1201",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-openssl_102e",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-openssl_110l",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-openssl_111d",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "clientsimulation-thunderbird_68_3_1",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+      },
+      {
+        "id": "rating_spec",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+      },
+      {
+        "id": "rating_doc",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+      },
+      {
+        "id": "protocol_support_score",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "100"
+      },
+      {
+        "id": "protocol_support_score_weighted",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "30"
+      },
+      {
+        "id": "key_exchange_score",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "90"
+      },
+      {
+        "id": "key_exchange_score_weighted",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "27"
+      },
+      {
+        "id": "cipher_strength_score",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "60"
+      },
+      {
+        "id": "cipher_strength_score_weighted",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "24"
+      },
+      {
+        "id": "final_score",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "81"
+      },
+      {
+        "id": "overall_grade",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "OK",
+        "finding": "A"
+      },
+      {
+        "id": "grade_cap_reason_1",
+        "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Grade capped to A. HSTS is not offered"
       },
       {
         "id": "scanTime",
         "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
         "port": "443",
-        "severity": "WARN",
-        "finding": "Scan interrupted"
+        "severity": "INFO",
+        "finding": "172"
       }
     ],
     "thirdparties": {
-      "trackers": null,
-      "cookies": null,
-      "headers": null
+      "trackers": [
+        {
+          "type": "google fonts",
+          "url": "https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "unknown",
+          "url": "https://html2canvas.hertzen.com/dist/html2canvas.min.js"
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.gstatic.com/s/materialicons/v103/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmEU9fBBc4.woff2",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.gstatic.com/s/robotocondensed/v19/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYbw.woff2",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff2",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfBBc4.woff2",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        },
+        {
+          "type": "google fonts",
+          "url": "https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc4.woff2",
+          "details": {
+            "id": "google fonts",
+            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+          }
+        }
+      ],
+      "cookies": [
+        {
+          "name": "PHPSESSID",
+          "value": "9b4dc6b0a3c103a3ae55741246c5b260",
+          "domain": "www2.assainissement.developpement-durable.gouv.fr",
+          "path": "/",
+          "expires": -1,
+          "size": 41,
+          "httpOnly": false,
+          "secure": false,
+          "session": true,
+          "sameParty": false,
+          "sourceScheme": "Secure",
+          "sourcePort": 443
+        }
+      ],
+      "headers": {
+        "server": "nginx",
+        "date": "Tue, 21 Sep 2021 10:24:15 GMT",
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "11520",
+        "connection": "keep-alive",
+        "set-cookie": "PHPSESSID=9b4dc6b0a3c103a3ae55741246c5b260; path=/",
+        "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+        "cache-control": "no-store, no-cache, must-revalidate",
+        "pragma": "no-cache",
+        "vary": "Accept-Encoding",
+        "content-encoding": "gzip",
+        "accept-ranges": "bytes"
+      },
+      "endpoints": [
+        {
+          "hostname": "www2.assainissement.developpement-durable.gouv.fr",
+          "ip": "37.235.89.249",
+          "geoip": {
+            "city": {
+              "geoname_id": 2998324,
+              "names": {
+                "de": "Lille",
+                "en": "Lille",
+                "es": "Lille",
+                "fr": "Lille",
+                "ja": "リール",
+                "pt-BR": "Lille",
+                "ru": "Лилль",
+                "zh-CN": "里尔"
+              }
+            },
+            "continent": {
+              "code": "EU",
+              "geoname_id": 6255148,
+              "names": {
+                "de": "Europa",
+                "en": "Europe",
+                "es": "Europa",
+                "fr": "Europe",
+                "ja": "ヨーロッパ",
+                "pt-BR": "Europa",
+                "ru": "Европа",
+                "zh-CN": "欧洲"
+              }
+            },
+            "country": {
+              "geoname_id": 3017382,
+              "is_in_european_union": true,
+              "iso_code": "FR",
+              "names": {
+                "de": "Frankreich",
+                "en": "France",
+                "es": "Francia",
+                "fr": "France",
+                "ja": "フランス共和国",
+                "pt-BR": "França",
+                "ru": "Франция",
+                "zh-CN": "法国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 100,
+              "latitude": 50.624,
+              "longitude": 3.0511,
+              "time_zone": "Europe/Paris"
+            },
+            "postal": {
+              "code": "59000"
+            },
+            "registered_country": {
+              "geoname_id": 3017382,
+              "is_in_european_union": true,
+              "iso_code": "FR",
+              "names": {
+                "de": "Frankreich",
+                "en": "France",
+                "es": "Francia",
+                "fr": "France",
+                "ja": "フランス共和国",
+                "pt-BR": "França",
+                "ru": "Франция",
+                "zh-CN": "法国"
+              }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 11071624,
+                "iso_code": "HDF",
+                "names": {
+                  "en": "Hauts-de-France",
+                  "fr": "Hauts-de-France"
+                }
+              },
+              {
+                "geoname_id": 2990129,
+                "iso_code": "59",
+                "names": {
+                  "de": "Nord",
+                  "en": "North",
+                  "es": "Norte",
+                  "fr": "Nord"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "hostname": "fonts.googleapis.com",
+          "ip": "172.217.14.234",
+          "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
+        },
+        {
+          "hostname": "html2canvas.hertzen.com",
+          "ip": "172.67.128.94",
+          "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
+        },
+        {
+          "hostname": "fonts.gstatic.com",
+          "ip": "142.251.33.99",
+          "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
+        }
+      ]
     },
     "wappalyzer": {
       "urls": {
         "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/": {
+          "status": 200
+        },
+        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/index": {
+          "status": 0
+        },
+        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/data": {
+          "status": 0
+        },
+        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/docs": {
+          "status": 0
+        },
+        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/regs": {
+          "status": 0
+        },
+        "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/faq": {
           "status": 0
         }
       },
-      "technologies": []
+      "technologies": [
+        {
+          "slug": "cart-functionality",
+          "name": "Cart Functionality",
+          "confidence": 100,
+          "version": null,
+          "icon": "Cart-generic.svg",
+          "website": "https://www.wappalyzer.com/technologies/ecommerce/cart-functionality",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 6,
+              "slug": "ecommerce",
+              "name": "Ecommerce"
+            }
+          ]
+        },
+        {
+          "slug": "php",
+          "name": "PHP",
+          "confidence": 100,
+          "version": null,
+          "icon": "PHP.svg",
+          "website": "http://php.net",
+          "cpe": "cpe:/a:php:php",
+          "categories": [
+            {
+              "id": 27,
+              "slug": "programming-languages",
+              "name": "Programming languages"
+            }
+          ]
+        },
+        {
+          "slug": "materialize-css",
+          "name": "Materialize CSS",
+          "confidence": 100,
+          "version": null,
+          "icon": "Materialize CSS.png",
+          "website": "http://materializecss.com",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 66,
+              "slug": "ui-frameworks",
+              "name": "UI frameworks"
+            }
+          ]
+        },
+        {
+          "slug": "nginx",
+          "name": "Nginx",
+          "confidence": 100,
+          "version": null,
+          "icon": "Nginx.svg",
+          "website": "http://nginx.org/en",
+          "cpe": "cpe:/a:nginx:nginx",
+          "categories": [
+            {
+              "id": 22,
+              "slug": "web-servers",
+              "name": "Web servers"
+            },
+            {
+              "id": 64,
+              "slug": "reverse-proxies",
+              "name": "Reverse proxies"
+            }
+          ]
+        },
+        {
+          "slug": "recaptcha",
+          "name": "reCAPTCHA",
+          "confidence": 100,
+          "version": null,
+          "icon": "reCAPTCHA.svg",
+          "website": "https://www.google.com/recaptcha/",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 16,
+              "slug": "security",
+              "name": "Security"
+            }
+          ]
+        },
+        {
+          "slug": "google-font-api",
+          "name": "Google Font API",
+          "confidence": 100,
+          "version": null,
+          "icon": "Google Font API.png",
+          "website": "http://google.com/fonts",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 17,
+              "slug": "font-scripts",
+              "name": "Font scripts"
+            }
+          ]
+        },
+        {
+          "slug": "periodic",
+          "name": "Periodic",
+          "confidence": 100,
+          "version": null,
+          "icon": "Periodic.svg",
+          "website": "https://periodic.is",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 72,
+              "slug": "appointment-scheduling",
+              "name": "Appointment scheduling"
+            }
+          ]
+        },
+        {
+          "slug": "jquery",
+          "name": "jQuery",
+          "confidence": 100,
+          "version": "3.6.0",
+          "icon": "jQuery.svg",
+          "website": "https://jquery.com",
+          "cpe": "cpe:/a:jquery:jquery",
+          "categories": [
+            {
+              "id": 59,
+              "slug": "javascript-libraries",
+              "name": "JavaScript libraries"
+            }
+          ]
+        }
+      ]
     },
     "zap": null,
-    "nuclei": [],
-    "lhr": null,
-    "screenshot": false,
-    "stats": null,
+    "nuclei": [
+      {
+        "templateID": "generic-tokens",
+        "info": {
+          "name": "Generic Tokens",
+          "author": [
+            "nadino",
+            "geeknik"
+          ],
+          "tags": [
+            "exposure",
+            "token"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "extracted_results": [
+          "key=\"6LfYv6YZAAAAAHpH65Sv_cPdni3Z3J53OcII-wRN\""
+        ],
+        "timestamp": "2021-09-21T10:28:09.914867853Z"
+      },
+      {
+        "templateID": "nginx-version",
+        "info": {
+          "name": "nginx version detect",
+          "author": [
+            "philippedelteil"
+          ],
+          "tags": [
+            "tech",
+            "nginx"
+          ],
+          "description": "Some nginx servers have the version on the response header. Useful when you need to find specific CVEs on your targets.",
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "extracted_results": [
+          "nginx"
+        ],
+        "timestamp": "2021-09-21T10:28:09.919887968Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-allow-credentials",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.500528202Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "x-content-type-options",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.501040796Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "referrer-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.507898517Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "cross-origin-opener-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.508152314Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "strict-transport-security",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.508481411Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "content-security-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.508761407Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-expose-headers",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.509043604Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.509325001Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "cross-origin-embedder-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.509608998Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "cross-origin-resource-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.509864095Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-max-age",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.510189091Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-allow-methods",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.510552787Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "x-frame-options",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.510945582Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "clear-site-data",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.511234079Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-allow-origin",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:28:48.511516976Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "php",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:29:32.649781711Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "materialize-css",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:29:32.650348103Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "recaptcha",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:29:33.119034132Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "google-font-api",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:29:33.174297228Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "nginx",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-21T10:29:33.233360275Z"
+      },
+      {
+        "templateID": "phpinfo-files",
+        "info": {
+          "name": "phpinfo Disclosure",
+          "author": [
+            "pdteam",
+            "daffainfo",
+            "meme-lord"
+          ],
+          "tags": [
+            "config",
+            "exposure"
+          ],
+          "reference": null,
+          "severity": "low"
+        },
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/phpinfo.php",
+        "extracted_results": [
+          "7.3.19"
+        ],
+        "timestamp": "2021-09-21T10:30:44.263647046Z"
+      }
+    ],
+    "lhr": {
+      "requestedUrl": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+      "finalUrl": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+      "fetchTime": "2021-09-21T10:23:47.027Z",
+      "runWarnings": [],
+      "categories": {
+        "performance": {
+          "title": "Performance",
+          "id": "performance",
+          "score": 0.8647850036621094
+        },
+        "accessibility": {
+          "title": "Accessibility",
+          "description": "These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.",
+          "manualDescription": "These items address areas which an automated testing tool cannot cover. Learn more in our guide on [conducting an accessibility review](https://developers.google.com/web/fundamentals/accessibility/how-to-review).",
+          "id": "accessibility",
+          "score": 0.88
+        },
+        "best-practices": {
+          "title": "Best Practices",
+          "id": "best-practices",
+          "score": 0.87
+        },
+        "seo": {
+          "title": "SEO",
+          "description": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769).",
+          "manualDescription": "Run these additional validators on your site to check additional SEO best practices.",
+          "id": "seo",
+          "score": 0.79
+        },
+        "pwa": {
+          "title": "Progressive Web App",
+          "description": "These checks validate the aspects of a Progressive Web App. [Learn more](https://developers.google.com/web/progressive-web-apps/checklist).",
+          "manualDescription": "These checks are required by the baseline [PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist) but are not automatically checked by Lighthouse. They do not affect your score but it's important that you verify them manually.",
+          "id": "pwa",
+          "score": 0.75
+        }
+      },
+      "audits": {
+        "metrics": {
+          "id": "metrics",
+          "title": "Metrics",
+          "description": "Collects all available metrics.",
+          "score": null,
+          "scoreDisplayMode": "informative",
+          "numericValue": 8475,
+          "numericUnit": "millisecond",
+          "details": {
+            "type": "debugdata",
+            "items": [
+              {
+                "firstContentfulPaint": 3239,
+                "firstMeaningfulPaint": 4000,
+                "largestContentfulPaint": 5853,
+                "firstCPUIdle": 4000,
+                "interactive": 8475,
+                "speedIndex": 4913,
+                "estimatedInputLatency": 13,
+                "totalBlockingTime": 43,
+                "maxPotentialFID": 113,
+                "cumulativeLayoutShift": 0,
+                "cumulativeLayoutShiftAllFrames": 0,
+                "observedTimeOrigin": 0,
+                "observedTimeOriginTs": 113005258,
+                "observedNavigationStart": 0,
+                "observedNavigationStartTs": 113005258,
+                "observedFirstPaint": 1489,
+                "observedFirstPaintTs": 114494417,
+                "observedFirstContentfulPaint": 1489,
+                "observedFirstContentfulPaintTs": 114494417,
+                "observedFirstMeaningfulPaint": 1752,
+                "observedFirstMeaningfulPaintTs": 114757125,
+                "observedLargestContentfulPaint": 1967,
+                "observedLargestContentfulPaintTs": 114972210,
+                "observedTraceEnd": 3577,
+                "observedTraceEndTs": 116582443,
+                "observedLoad": 2362,
+                "observedLoadTs": 115366837,
+                "observedDomContentLoaded": 1573,
+                "observedDomContentLoadedTs": 114578265,
+                "observedCumulativeLayoutShift": 0,
+                "observedCumulativeLayoutShiftAllFrames": 0,
+                "observedFirstVisualChange": 1490,
+                "observedFirstVisualChangeTs": 114495258,
+                "observedLastVisualChange": 2956,
+                "observedLastVisualChangeTs": 115961258,
+                "observedSpeedIndex": 1986,
+                "observedSpeedIndexTs": 114991234
+              },
+              {
+                "lcpInvalidated": false
+              }
+            ]
+          }
+        },
+        "diagnostics": {
+          "id": "diagnostics",
+          "title": "Diagnostics",
+          "description": "Collection of useful page vitals.",
+          "score": null,
+          "scoreDisplayMode": "informative",
+          "details": {
+            "type": "debugdata",
+            "items": [
+              {
+                "numRequests": 26,
+                "numScripts": 6,
+                "numStylesheets": 7,
+                "numFonts": 6,
+                "numTasks": 428,
+                "numTasksOver10ms": 9,
+                "numTasksOver25ms": 4,
+                "numTasksOver50ms": 0,
+                "numTasksOver100ms": 0,
+                "numTasksOver500ms": 0,
+                "rtt": 5.202,
+                "throughput": 13519572.218018048,
+                "maxRtt": 151.316,
+                "maxServerLatency": 17.387999999999998,
+                "totalByteWeight": 1757492,
+                "totalTaskTime": 388.25200000000007,
+                "mainDocumentTransferSize": 11950
+              }
+            ]
+          }
+        }
+      }
+    },
+    "screenshot": true,
+    "stats": {
+      "grade": "F",
+      "url": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+      "uri": "stats"
+    },
     "summary": {
-      "cookiesGrade": null,
-      "cookiesCount": null,
-      "trackersGrade": null,
-      "trackersCount": null
+      "testsslGrade": "A",
+      "cookiesGrade": "B",
+      "cookiesCount": 1,
+      "trackersGrade": "F",
+      "trackersCount": 11,
+      "lighthouse_performance": 0.8647850036621094,
+      "lighthouse_performanceGrade": "A",
+      "lighthouse_accessibility": 0.88,
+      "lighthouse_accessibilityGrade": "A",
+      "lighthouse_best-practices": 0.87,
+      "lighthouse_best-practicesGrade": "A",
+      "lighthouse_seo": 0.79,
+      "lighthouse_seoGrade": "B",
+      "lighthouse_pwa": 0.75,
+      "lighthouse_pwaGrade": "B",
+      "statsGrade": "F"
     }
   }
 ]
