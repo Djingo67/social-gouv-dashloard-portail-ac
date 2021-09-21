@@ -57,10 +57,8 @@ jobs:
         timeout-minutes: 10
         with:
           source: "${{ matrix.sites.url }}"
-          type: jpeg
           destination: screenshot.jpeg
           width: 1280
-          scaleFactor: 0.5
 
       - name: Stats page
         continue-on-error: true
@@ -83,7 +81,7 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.4.0
         timeout-minutes: 10
-        if: ${{ matrix.sites.tools.zaproxy }}
+        if: ${{ matrix.sites.tools.zap }}
         continue-on-error: true
         with:
           token: "" # disable issue creation
@@ -105,7 +103,7 @@ jobs:
 
       - name: Mozilla HTTP Observatory
         timeout-minutes: 10
-        if: ${{ matrix.sites.tools.httpobs }}
+        if: ${{ matrix.sites.tools.http }}
         continue-on-error: true
         uses: SocialGouv/httpobs-action@master
         with:
