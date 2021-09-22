@@ -1280,7 +1280,7 @@
         "ip": "www2.assainissement.developpement-durable.gouv.fr/37.235.89.249",
         "port": "443",
         "severity": "INFO",
-        "finding": "180"
+        "finding": "107"
       }
     ],
     "thirdparties": {
@@ -1360,20 +1360,12 @@
             "id": "google fonts",
             "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
           }
-        },
-        {
-          "type": "google fonts",
-          "url": "https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc4.woff2",
-          "details": {
-            "id": "google fonts",
-            "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
-          }
         }
       ],
       "cookies": [
         {
           "name": "PHPSESSID",
-          "value": "c2024c2cb80396e526be4e733e7d03dc",
+          "value": "59fa5f20fcf65602491e25e80facc2a2",
           "domain": "www2.assainissement.developpement-durable.gouv.fr",
           "path": "/",
           "expires": -1,
@@ -1388,11 +1380,11 @@
       ],
       "headers": {
         "server": "nginx",
-        "date": "Wed, 22 Sep 2021 08:51:44 GMT",
+        "date": "Wed, 22 Sep 2021 09:51:12 GMT",
         "content-type": "text/html; charset=UTF-8",
-        "content-length": "11520",
+        "content-length": "11521",
         "connection": "keep-alive",
-        "set-cookie": "PHPSESSID=c2024c2cb80396e526be4e733e7d03dc; path=/",
+        "set-cookie": "PHPSESSID=59fa5f20fcf65602491e25e80facc2a2; path=/",
         "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
         "cache-control": "no-store, no-cache, must-revalidate",
         "pragma": "no-cache",
@@ -1495,7 +1487,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.251.33.74",
+          "ip": "172.217.9.202",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1549,12 +1541,61 @@
         },
         {
           "hostname": "html2canvas.hertzen.com",
-          "ip": "104.21.0.230",
-          "geoip": null
+          "ip": "172.67.128.94",
+          "geoip": {
+            "continent": {
+              "code": "NA",
+              "geoname_id": 6255149,
+              "names": {
+                "de": "Nordamerika",
+                "en": "North America",
+                "es": "Norteamérica",
+                "fr": "Amérique du Nord",
+                "ja": "北アメリカ",
+                "pt-BR": "América do Norte",
+                "ru": "Северная Америка",
+                "zh-CN": "北美洲"
+              }
+            },
+            "country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            },
+            "location": {
+              "accuracy_radius": 1000,
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
+            },
+            "registered_country": {
+              "geoname_id": 6252001,
+              "iso_code": "US",
+              "names": {
+                "de": "USA",
+                "en": "United States",
+                "es": "EE. UU.",
+                "fr": "É.-U.",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
+              }
+            }
+          }
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.33.99",
+          "ip": "172.217.12.227",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1767,7 +1808,7 @@
     },
     "zap": {
       "@version": "2.10.0",
-      "@generated": "Wed, 22 Sep 2021 08:50:52",
+      "@generated": "Wed, 22 Sep 2021 09:50:45",
       "site": [
         {
           "@name": "http://www2.assainissement.developpement-durable.gouv.fr",
@@ -1930,13 +1971,6 @@
               "desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>"
             },
             {
-              "name": "Content-Type Header Missing",
-              "riskcode": "0",
-              "confidence": "2",
-              "riskdesc": "Informational (Medium)",
-              "desc": "<p>The Content-Type header was either missing or empty.</p>"
-            },
-            {
               "name": "Cookie No HttpOnly Flag",
               "riskcode": "1",
               "confidence": "2",
@@ -1951,6 +1985,13 @@
               "desc": "<p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p>"
             },
             {
+              "name": "Content-Type Header Missing",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The Content-Type header was either missing or empty.</p>"
+            },
+            {
               "name": "Vulnerable JS Library",
               "riskcode": "2",
               "confidence": "2",
@@ -1962,29 +2003,6 @@
       ]
     },
     "nuclei": [
-      {
-        "templateID": "generic-tokens",
-        "info": {
-          "name": "Generic Tokens",
-          "author": [
-            "nadino",
-            "geeknik"
-          ],
-          "tags": [
-            "exposure",
-            "token"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "extracted_results": [
-          "key=\"6LfYv6YZAAAAAHpH65Sv_cPdni3Z3J53OcII-wRN\""
-        ],
-        "timestamp": "2021-09-22T08:55:49.152528225Z"
-      },
       {
         "templateID": "nginx-version",
         "info": {
@@ -2006,7 +2024,125 @@
         "extracted_results": [
           "nginx"
         ],
-        "timestamp": "2021-09-22T08:55:49.157742179Z"
+        "timestamp": "2021-09-22T09:53:49.799216378Z"
+      },
+      {
+        "templateID": "generic-tokens",
+        "info": {
+          "name": "Generic Tokens",
+          "author": [
+            "nadino",
+            "geeknik"
+          ],
+          "tags": [
+            "exposure",
+            "token"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "extracted_results": [
+          "key=\"6LfYv6YZAAAAAHpH65Sv_cPdni3Z3J53OcII-wRN\""
+        ],
+        "timestamp": "2021-09-22T09:53:49.837216745Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "recaptcha",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:53:58.378499007Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "google-font-api",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:53:58.379238655Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "nginx",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:53:58.379876496Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "php",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:53:58.380354627Z"
+      },
+      {
+        "templateID": "tech-detect",
+        "info": {
+          "name": "Wappalyzer Technology Detection",
+          "author": [
+            "hakluke"
+          ],
+          "tags": [
+            "tech"
+          ],
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "materialize-css",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:53:58.380852959Z"
       },
       {
         "templateID": "phpinfo-files",
@@ -2031,414 +2167,7 @@
         "extracted_results": [
           "7.3.19"
         ],
-        "timestamp": "2021-09-22T08:56:22.545389644Z"
-      },
-      {
-        "templateID": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "materialize-css",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:56:35.125696588Z"
-      },
-      {
-        "templateID": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "recaptcha",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:56:35.126173487Z"
-      },
-      {
-        "templateID": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "google-font-api",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:56:35.128582981Z"
-      },
-      {
-        "templateID": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "nginx",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:56:35.129582378Z"
-      },
-      {
-        "templateID": "tech-detect",
-        "info": {
-          "name": "Wappalyzer Technology Detection",
-          "author": [
-            "hakluke"
-          ],
-          "tags": [
-            "tech"
-          ],
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "php",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:56:35.130302477Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "strict-transport-security",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.866611575Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "content-security-policy",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.867091674Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "x-permitted-cross-domain-policies",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.870626966Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "x-frame-options",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.871274664Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "cross-origin-opener-policy",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.871883163Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "access-control-allow-origin",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.872482962Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "access-control-allow-methods",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.87309076Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "x-content-type-options",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.873721659Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "referrer-policy",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.874355957Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "clear-site-data",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.874966356Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "cross-origin-resource-policy",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.875574154Z"
-      },
-      {
-        "templateID": "http-missing-security-headers",
-        "info": {
-          "name": "HTTP Missing Security Headers",
-          "author": [
-            "socketz",
-            "geeknik",
-            "g4l1t0",
-            "convisoappsec",
-            "kurohost",
-            "dawid-czarnecki"
-          ],
-          "tags": [
-            "misconfig",
-            "generic"
-          ],
-          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
-          "reference": null,
-          "severity": "info"
-        },
-        "matcher_name": "access-control-max-age",
-        "type": "http",
-        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.876230053Z"
+        "timestamp": "2021-09-22T09:54:17.793000303Z"
       },
       {
         "templateID": "http-missing-security-headers",
@@ -2464,7 +2193,137 @@
         "type": "http",
         "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
         "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.876849751Z"
+        "timestamp": "2021-09-22T09:55:50.527787095Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "cross-origin-opener-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.528361732Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-max-age",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.5356308Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "content-security-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.536387349Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "referrer-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.537018889Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "clear-site-data",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.537599527Z"
       },
       {
         "templateID": "http-missing-security-headers",
@@ -2490,7 +2349,189 @@
         "type": "http",
         "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
         "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.87744825Z"
+        "timestamp": "2021-09-22T09:55:50.538164663Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-allow-methods",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.539243432Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "x-content-type-options",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.539738264Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "x-permitted-cross-domain-policies",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.540229696Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "cross-origin-resource-policy",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.54076643Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "strict-transport-security",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.541341568Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "x-frame-options",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.541928105Z"
+      },
+      {
+        "templateID": "http-missing-security-headers",
+        "info": {
+          "name": "HTTP Missing Security Headers",
+          "author": [
+            "socketz",
+            "geeknik",
+            "g4l1t0",
+            "convisoappsec",
+            "kurohost",
+            "dawid-czarnecki"
+          ],
+          "tags": [
+            "misconfig",
+            "generic"
+          ],
+          "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+          "reference": null,
+          "severity": "info"
+        },
+        "matcher_name": "access-control-allow-origin",
+        "type": "http",
+        "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+        "timestamp": "2021-09-22T09:55:50.542496042Z"
       },
       {
         "templateID": "http-missing-security-headers",
@@ -2516,19 +2557,19 @@
         "type": "http",
         "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
         "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-        "timestamp": "2021-09-22T08:57:09.878062848Z"
+        "timestamp": "2021-09-22T09:55:50.543054378Z"
       }
     ],
     "lhr": {
       "requestedUrl": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
       "finalUrl": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
-      "fetchTime": "2021-09-22T08:50:55.395Z",
+      "fetchTime": "2021-09-22T09:50:48.287Z",
       "runWarnings": [],
       "categories": {
         "performance": {
           "title": "Performance",
           "id": "performance",
-          "score": 0.8435878753662109
+          "score": 0.8657360076904297
         },
         "accessibility": {
           "title": "Accessibility",
@@ -2564,49 +2605,49 @@
           "description": "Collects all available metrics.",
           "score": null,
           "scoreDisplayMode": "informative",
-          "numericValue": 8791,
+          "numericValue": 3663,
           "numericUnit": "millisecond",
           "details": {
             "type": "debugdata",
             "items": [
               {
-                "firstContentfulPaint": 3256,
-                "firstMeaningfulPaint": 3989,
-                "largestContentfulPaint": 6422,
-                "firstCPUIdle": 3989,
-                "interactive": 8791,
-                "speedIndex": 4911,
+                "firstContentfulPaint": 2720,
+                "firstMeaningfulPaint": 3663,
+                "largestContentfulPaint": 9963,
+                "firstCPUIdle": 3663,
+                "interactive": 3663,
+                "speedIndex": 3752,
                 "estimatedInputLatency": 13,
-                "totalBlockingTime": 17,
-                "maxPotentialFID": 92,
+                "totalBlockingTime": 7,
+                "maxPotentialFID": 111,
                 "cumulativeLayoutShift": 0,
                 "cumulativeLayoutShiftAllFrames": 0,
                 "observedTimeOrigin": 0,
-                "observedTimeOriginTs": 244993193,
+                "observedTimeOriginTs": 220334889,
                 "observedNavigationStart": 0,
-                "observedNavigationStartTs": 244993193,
-                "observedFirstPaint": 1478,
-                "observedFirstPaintTs": 246471182,
-                "observedFirstContentfulPaint": 1478,
-                "observedFirstContentfulPaintTs": 246471182,
-                "observedFirstMeaningfulPaint": 1702,
-                "observedFirstMeaningfulPaintTs": 246695648,
-                "observedLargestContentfulPaint": 1990,
-                "observedLargestContentfulPaintTs": 246982964,
-                "observedTraceEnd": 3570,
-                "observedTraceEndTs": 248562907,
-                "observedLoad": 2355,
-                "observedLoadTs": 247347822,
-                "observedDomContentLoaded": 1549,
-                "observedDomContentLoadedTs": 246542590,
+                "observedNavigationStartTs": 220334889,
+                "observedFirstPaint": 893,
+                "observedFirstPaintTs": 221227945,
+                "observedFirstContentfulPaint": 893,
+                "observedFirstContentfulPaintTs": 221227945,
+                "observedFirstMeaningfulPaint": 1391,
+                "observedFirstMeaningfulPaintTs": 221725564,
+                "observedLargestContentfulPaint": 1631,
+                "observedLargestContentfulPaintTs": 221966235,
+                "observedTraceEnd": 2624,
+                "observedTraceEndTs": 222959191,
+                "observedLoad": 1468,
+                "observedLoadTs": 221802540,
+                "observedDomContentLoaded": 937,
+                "observedDomContentLoadedTs": 221271463,
                 "observedCumulativeLayoutShift": 0,
                 "observedCumulativeLayoutShiftAllFrames": 0,
-                "observedFirstVisualChange": 1480,
-                "observedFirstVisualChangeTs": 246473193,
-                "observedLastVisualChange": 2946,
-                "observedLastVisualChangeTs": 247939193,
-                "observedSpeedIndex": 1979,
-                "observedSpeedIndexTs": 246971954
+                "observedFirstVisualChange": 906,
+                "observedFirstVisualChangeTs": 221240889,
+                "observedLastVisualChange": 1922,
+                "observedLastVisualChangeTs": 222256889,
+                "observedSpeedIndex": 1448,
+                "observedSpeedIndexTs": 221782962
               },
               {
                 "lcpInvalidated": false
@@ -2628,18 +2669,18 @@
                 "numScripts": 6,
                 "numStylesheets": 7,
                 "numFonts": 6,
-                "numTasks": 455,
-                "numTasksOver10ms": 9,
-                "numTasksOver25ms": 2,
+                "numTasks": 452,
+                "numTasksOver10ms": 11,
+                "numTasksOver25ms": 1,
                 "numTasksOver50ms": 0,
                 "numTasksOver100ms": 0,
                 "numTasksOver500ms": 0,
-                "rtt": 4.962000000000001,
-                "throughput": 14666991.095220705,
-                "maxRtt": 151.75900000000001,
-                "maxServerLatency": 9.712,
-                "totalByteWeight": 1868626,
-                "totalTaskTime": 347.9969999999999,
+                "rtt": 5.624999999999999,
+                "throughput": 21373392.808685977,
+                "maxRtt": 86.592,
+                "maxServerLatency": 21.720000000000002,
+                "totalByteWeight": 1752506,
+                "totalTaskTime": 280.4269999999995,
                 "mainDocumentTransferSize": 11950
               }
             ]
@@ -2658,9 +2699,9 @@
       "testsslGrade": "A",
       "cookiesGrade": "B",
       "cookiesCount": 1,
-      "trackersGrade": "F",
-      "trackersCount": 11,
-      "lighthouse_performance": 0.8435878753662109,
+      "trackersGrade": "C",
+      "trackersCount": 10,
+      "lighthouse_performance": 0.8657360076904297,
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.88,
       "lighthouse_accessibilityGrade": "A",
