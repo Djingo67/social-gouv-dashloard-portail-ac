@@ -19,4 +19,4 @@ tools:
 urls:
   - url: https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/
     repositories:
-      - Djingo67/PortailAC
+      - Djingo67/portail-ac-dsfr
