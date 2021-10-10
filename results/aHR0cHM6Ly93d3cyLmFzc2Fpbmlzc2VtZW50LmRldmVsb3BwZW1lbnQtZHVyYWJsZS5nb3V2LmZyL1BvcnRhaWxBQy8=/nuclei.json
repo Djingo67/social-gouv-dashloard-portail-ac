@@ -1,0 +1,464 @@
+[
+  {
+    "templateID": "basic-auth-detection",
+    "info": {
+      "name": "Basic auth detection",
+      "author": [
+        "w4cky_"
+      ],
+      "tags": [
+        "tech",
+        "basic-auth"
+      ],
+      "reference": null,
+      "severity": "info"
+    },
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:29:29 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:29:30.800725635Z"
+  },
+  {
+    "templateID": "tech-detect",
+    "info": {
+      "name": "Wappalyzer Technology Detection",
+      "author": [
+        "hakluke"
+      ],
+      "tags": [
+        "tech"
+      ],
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "nginx",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:29:58 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:29:59.637237073Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "strict-transport-security",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.537698349Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "x-content-type-options",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.537786351Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "clear-site-data",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.537822751Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "cross-origin-embedder-policy",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.541441716Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "access-control-expose-headers",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.542936943Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "content-security-policy",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543075246Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "x-permitted-cross-domain-policies",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543191548Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "referrer-policy",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543349851Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "x-frame-options",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543477353Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "cross-origin-opener-policy",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543519154Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "cross-origin-resource-policy",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543577255Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "access-control-allow-origin",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543620256Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "access-control-allow-credentials",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543663856Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "access-control-max-age",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543712557Z"
+  },
+  {
+    "templateID": "http-missing-security-headers",
+    "info": {
+      "name": "HTTP Missing Security Headers",
+      "author": [
+        "socketz",
+        "geeknik",
+        "g4l1t0",
+        "convisoappsec",
+        "kurohost",
+        "dawid-czarnecki"
+      ],
+      "tags": [
+        "misconfig",
+        "generic"
+      ],
+      "description": "It searches for missing security headers, but obviously, could be so less generic and could be useless for Bug Bounty.",
+      "reference": null,
+      "severity": "info"
+    },
+    "matcher_name": "access-control-allow-methods",
+    "type": "http",
+    "host": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "matched": "https://www2.assainissement.developpement-durable.gouv.fr/PortailAC/",
+    "request": "GET /PortailAC/ HTTP/1.1\r\nHost: www2.assainissement.developpement-durable.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+    "response": "HTTP/1.1 401 Unauthorized\r\nConnection: close\r\nContent-Length: 172\r\nContent-Type: text/html\r\nDate: Sun, 10 Oct 2021 11:31:30 GMT\r\nServer: nginx\r\nWww-Authenticate: Basic realm=\"Site en maintenance\"\r\n\r\n<html>\r\n<head><title>401 Authorization Required</title></head>\r\n<body>\r\n<center><h1>401 Authorization Required</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+    "timestamp": "2021-10-10T11:31:31.543756258Z"
+  }
+]
